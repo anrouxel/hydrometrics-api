@@ -24,6 +24,7 @@ parts:
   hydrometrics-api:
     plugin: npm
     npm-node-version: 16.20.0
+    npm-include-node: true
     source: https://gitlab.univ-nantes.fr/E213726L/eq_init_04_00_bigeard-lucas_ferry-nathan_rouxel-antonin_ruaud-antonin.git
     source-type: git
     source-subdir: API
