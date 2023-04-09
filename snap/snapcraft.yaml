@@ -1,0 +1,34 @@
+name: hydrometrics-api
+license: GPL-3.0
+summary: API de communication entre le serveur et Android
+description: |
+  API de communication entre le serveur et Android
+base: core22
+grade: stable
+confinement: strict
+version: v1.0
+adopt-info: hydrometrics-api
+
+architectures:
+  - build-on: amd64
+    build-for: amd64
+
+apps:
+  hydrometrics-api:
+    command: bin/hydrometrics-api
+    daemon: simple
+    restart-condition: always
+    plugs: [home, network, network-bind]
+
+parts:
+  hydrometrics-api:
+    plugin: npm
+    npm-node-version: 16.20.0
+    source: https://gitlab.univ-nantes.fr/E213726L/eq_init_04_00_bigeard-lucas_ferry-nathan_rouxel-antonin_ruaud-antonin.git
+    source-type: git
+    source-subdir: API
+    build-snaps:
+      - node/16/stable
+    build-packages:
+      - git
+      - sed
