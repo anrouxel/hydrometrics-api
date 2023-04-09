@@ -1,8 +1,8 @@
 name: hydrometrics-api
 license: GPL-3.0
-summary: API de communication entre le serveur et Android
+summary: HydroMetrics API
 description: |
-  API de communication entre le serveur et Android
+  HydroMetrics API
 base: core22
 grade: stable
 confinement: strict
